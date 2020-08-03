@@ -1,102 +1,133 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class CSSInventory : MonoBehaviour
+namespace SK.KNAPSACK
 {
-    public static CSSInventory SharedInstance = null;
-    public bool CanDrag = true;
-    public GameObject LastShowmessageBox = null;
-    public List<CSItemBase> Items = null;
-    private CSSSlot[] Slots = null;
+    public class CSSInventory : MonoBehaviour
+    {
+        public static CSSInventory SharedInstance = null;
+        public bool CanDrag = true;
+        public GameObject LastShowmessageBox = null;
+        public List<CSItemBase> Items = null;
+        private CSSSlot[] Slots = null;
 
-    private void Awake()
-    {
-        SharedInstance = this;
-        CanDrag = true;
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        Slots = GetComponentsInChildren<CSSSlot>();
-        Items = new List<CSItemBase>();
-        Items.Add(new CSitemHuman(40, "xiaohai", ItemQuality.SR,ItemType.Human, "shuoming", 20, 50, 25, "Ch22_1002_Diffuse 1", 100));
-    }
+        private void Awake()
+        {
+            SharedInstance = this;
+            CanDrag = true;
+        }
+        // Start is called before the first frame update
+        void Start()
+        {
+            Slots = GetComponentsInChildren<CSSSlot>();
+            Items = new List<CSItemBase>();
+            Items.Add(new CSitemHuman(50, "Pj", ItemQuality.SR, ItemType.Human, "shuoming", 20, 50, 25, "Textures/Texture@UI/50",
+                "Materials/PJ@Show@Material", "Prefabs/OperatingPart/OtherPart/Show/PjanicShow", "Prefabs/OperatingPart/OtherPart/Move/PjanicMove", BodyType.OtherPart, 100));
+            Items.Add(new CSitemAnimals(40, "GuaWa", ItemQuality.SR, ItemType.animals, "shuoming", 20, 50, 25, "Textures/Texture@UI/40",
+                "Materials/Material@Guaiwa@show", "Prefabs/OperatingPart/MainPart/Show/GuaWaShow", "Prefabs/OperatingPart/MainPart/Move/GuaWaMove", BodyType.MainPart, 100));
+            Items.Add(new CSitemAnimals(30, "Zhizhu", ItemQuality.SR, ItemType.animals, "shuoming", 20, 50, 25, "Textures/Texture@UI/30",
+                "Materials/Material@Spide@Show", "Prefabs/OperatingPart/MainPart/Show/SpiderShow", "Prefabs/OperatingPart/MainPart/Move/SpiderMove", BodyType.MainPart, 100));
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.G))
+        // Update is called once per frame
+        void Update()
         {
-            isPutInsideSlots(40);
-        }
-    }
-    public CSItemBase GetItem(int iD)
-    {
-        for(int i=0;i<Items.Count;i++)
-        {
-            CSItemBase _item = Items[i];
-            if (_item.ID == iD) return _item;
-        }
-        return null;
-    }
-    public bool isPutInsideSlots(int id)
-    {
-        CSItemBase item = CSSInventory.SharedInstance.GetItem(id);
-        return isPutInsideSlots(item);
-    }
-    public bool isPutInsideSlots(CSItemBase item)
-    {
-        if (item == null) return false;
-        if(item.Capacity==1)
-        {
-            CSSSlot slot = FindEmptySlot();
-            if(slot==null)
+            if (Input.GetKeyDown(KeyCode.G))
             {
-                Debug.LogWarning("mei kong de slot");
-                return false;
+                isPutInsideSlots(40);
+                isPutInsideSlots(50);
             }
-            else
+            if (Input.GetKeyDown(KeyCode.H))
             {
-                slot.PutInside(item);
+                isPutInsideSlots(30);
             }
         }
-        else
+        public CSItemBase GetItem(int iD)
         {
-            CSSSlot _slot = FindSameTypeSlot(item);
-            if(_slot!=null)
+            for (int i = 0; i < Items.Count; i++)
             {
-                _slot.PutInside(item);
+                CSItemBase _item = Items[i];
+                if (_item.ID == iD) return _item;
             }
-            else
+            return null;
+        }
+        public bool isPutInsideSlots(int id)
+        {
+            CSItemBase item = CSSInventory.SharedInstance.GetItem(id);
+            return isPutInsideSlots(item);
+        }
+        public bool isPutInsideSlots(CSItemBase item)
+        {
+            if (item == null) return false;
+            if (item.Capacity == 1)
             {
-                CSSSlot slot2 = FindEmptySlot();
-                if (slot2 != null) slot2.PutInside(item);
-                else
+                CSSSlot slot = FindEmptySlot();
+                if (slot == null)
                 {
-                    Debug.LogWarning("mei kongde ");
+                    Debug.LogWarning("mei kong de slot");
                     return false;
                 }
+                else
+                {
+                    slot.PutInside(item);
+                }
             }
+            else
+            {
+                CSSSlot _slot = FindSameIDSlot(item);
+                if (_slot != null)
+                {
+                    _slot.PutInside(item);
+                }
+                else
+                {
+                    CSSSlot slot2 = FindEmptySlot();
+                    if (slot2 != null) slot2.PutInside(item);
+                    else
+                    {
+                        Debug.LogWarning("mei kongde ");
+                        return false;
+                    }
+                }
+            }
+            return true;
         }
-        return true;
-    }
-    private CSSSlot FindEmptySlot()
-    {
-        foreach(CSSSlot slot in Slots)
+        private CSSSlot FindEmptySlot()
         {
-            if (slot.transform.childCount == 0)
-                return slot;
+            foreach (CSSSlot slot in Slots)
+            {
+                if (slot.transform.childCount == 0)
+                    return slot;
+            }
+            return null;
         }
-        return null;
-    }
-    private CSSSlot FindSameTypeSlot(CSItemBase Item)
-    {
-        foreach(CSSSlot slot in Slots)
+        private CSSSlot FindSameTypeSlot(CSItemBase Item)
         {
-            if (slot.transform.childCount >= 1 && slot.GetItemType() == Item.Type && slot.IsFilled() == false)
-                return slot;
+            foreach (CSSSlot slot in Slots)
+            {
+                if (slot.transform.childCount >= 1 && slot.GetItemType() == Item.Type && slot.IsFilled() == false)
+                    return slot;
+            }
+            return null;
         }
-        return null;
+        private CSSSlot FindSameNameSlot(CSItemBase Item)
+        {
+            foreach (CSSSlot slot in Slots)
+            {
+                if (slot.transform.childCount >= 1 && slot.GetItemName() == Item.Name && slot.IsFilled() == false)
+                    return slot;
+            }
+            return null;
+        }
+
+        private CSSSlot FindSameIDSlot(CSItemBase Item)
+        {
+            foreach (CSSSlot slot in Slots)
+            {
+                if (slot.transform.childCount >= 1 && slot.GetItemID() == Item.ID && slot.IsFilled() == false)
+                    return slot;
+            }
+            return null;
+        }
     }
 }
