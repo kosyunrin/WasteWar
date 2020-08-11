@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-namespace SK.PLAYER
+namespace SK
 {
 
     public class CSTouchMove : MonoBehaviour, IDragHandler, IEndDragHandler
@@ -40,6 +40,7 @@ namespace SK.PLAYER
         {
             //初始化背景图标位置
             moveBackPos = transform.parent.transform.position;
+
         }
 
         // Update is called once per frame
@@ -61,8 +62,9 @@ namespace SK.PLAYER
             float distance = Vector3.Magnitude(oppsitionVec);
             //最小值与最大值之间取半径
             float radius = Mathf.Clamp(distance, 0, maxRadius);
+           // float radius = maxRadius;
             //限制半径长度
-            transform.position = moveBackPos + oppsitionVec.normalized * radius;
+            transform.position = moveBackPos + oppsitionVec.normalized * radius*1000;
 
         }
 

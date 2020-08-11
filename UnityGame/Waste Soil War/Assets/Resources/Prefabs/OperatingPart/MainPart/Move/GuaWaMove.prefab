@@ -1439,10 +1439,10 @@ GameObject:
   m_Component:
   - component: {fileID: 8508578451533449821}
   - component: {fileID: 8508578451541140927}
-  - component: {fileID: 8508578449964757408}
+  - component: {fileID: 7231199599795440964}
   m_Layer: 0
-  m_Name: GuaWa
-  m_TagString: Untagged
+  m_Name: GuaWaMove
+  m_TagString: Move
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1482,7 +1482,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &8508578449964757408
+--- !u!114 &7231199599795440964
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1491,7 +1491,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8508578451533747837}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc4adb9a23c08f64cab1b96a034eab76, type: 3}
+  m_Script: {fileID: 11500000, guid: 0f76b404780603846b1717f899a7030f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &8508578451533747839

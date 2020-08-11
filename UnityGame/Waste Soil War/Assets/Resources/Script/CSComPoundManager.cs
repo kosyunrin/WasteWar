@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace SK.PLAYER
+namespace SK
 {
     public class CSComPoundManager : MonoBehaviour
     {

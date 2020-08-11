@@ -180,14 +180,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 564496795699105908}
-  - component: {fileID: 7592925046963272974}
-  - component: {fileID: 1827619634651461579}
-  - component: {fileID: 5195198761476445898}
-  - component: {fileID: 5591107621784511376}
   - component: {fileID: 1731718317997000092}
+  - component: {fileID: 4521821128192504705}
+  - component: {fileID: 8392737369242956856}
+  - component: {fileID: 6011331558848425094}
   m_Layer: 0
   m_Name: PjanicMove
-  m_TagString: Untagged
+  m_TagString: Move
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -209,64 +208,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
---- !u!95 &7592925046963272974
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3570834438322070119}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: e5315b6bfbb91bc469f91c8e04433aa2, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1827619634651461579
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3570834438322070119}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 004d352fc00ff83428142c0aa81e533c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!64 &5195198761476445898
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3570834438322070119}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
---- !u!114 &5591107621784511376
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3570834438322070119}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 435d668d3ccb8ad4fa3dcd45e6374c29, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  iSdraging: 0
 --- !u!65 &1731718317997000092
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -280,6 +221,44 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.445393, y: 3.4386215, z: 3.4259214}
   m_Center: {x: -1.2226969, y: 1.6950138, z: 0.5468892}
+--- !u!114 &4521821128192504705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3570834438322070119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f7cbe7ea00c952438cd81c252dffe4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!64 &8392737369242956856
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3570834438322070119}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
+--- !u!114 &6011331558848425094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3570834438322070119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 435d668d3ccb8ad4fa3dcd45e6374c29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8650931964183610516
 GameObject:
   m_ObjectHideFlags: 0

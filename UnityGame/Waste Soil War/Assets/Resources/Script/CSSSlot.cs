@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-namespace SK.KNAPSACK
+namespace SK
 {
 
     public class CSSSlot : MonoBehaviour
     {
         public GameObject ItemPrefas = null;
-        private int Amount;
+        //private int Amount;
         private void Awake()
         {
             if (ItemPrefas == null)
@@ -25,9 +25,7 @@ namespace SK.KNAPSACK
         {
 
         }
-        public void AddAmount(int num)
-        {
-        }
+        
         public void PutInside(CSItemBase item)
         {
             if (transform.childCount == 0)
