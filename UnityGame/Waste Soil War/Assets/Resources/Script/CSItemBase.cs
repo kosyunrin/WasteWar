@@ -2,25 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace SK.KNAPSACK
+namespace SK
 {
     public enum ItemType
     {
         Human,
         animals,
-        robot
+        robot,
+        Chimera
     }
     public enum ItemQuality
     {
         N,
         R,
         SR,
-        SSR
+        SSR,
+        UR
     }
     public enum BodyType
     {
+        None,
         MainPart,
-        OtherPart
+        OtherPart,
     }
     public interface IteamInterface
     {

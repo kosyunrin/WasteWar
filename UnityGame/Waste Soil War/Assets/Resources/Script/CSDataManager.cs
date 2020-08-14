@@ -32,11 +32,9 @@ namespace SK.GAMEDATA
             if (dataStr == string.Empty)
             {
                 gamedata.name = null;
-                Debug.Log("null");
             }
             else
             {
-                Debug.Log("ari");
                 gamedata = JsonUtility.FromJson<GameData>(dataStr);
             }
         }
@@ -46,11 +44,9 @@ namespace SK.GAMEDATA
             if (dataStr == string.Empty)
             {
                 gamedata.name = null;
-                Debug.Log("null");
             }
             else
             {
-                Debug.Log("ari");
                 return gamedata = JsonUtility.FromJson<GameData>(dataStr);
             }
             return gamedata;

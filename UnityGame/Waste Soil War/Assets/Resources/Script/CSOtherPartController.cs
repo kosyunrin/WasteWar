@@ -1,18 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class CSOtherPartController : CSPlayerBase
+namespace SK
 {
-    // Start is called before the first frame update
-    void Start()
+    public class CSOtherPartController : CSitemHuman
     {
-        
-    }
+        public CSOtherPartController(int iD, string name, ItemQuality quality, ItemType type, string description, int capacity, int buyPrice,
+              int sellprice, string sprite, string renderMaterial, string showMonoPath, string moveMonoPath, BodyType btype, int other) : base(iD, name, quality, type, description, capacity, buyPrice, sellprice, sprite, renderMaterial, showMonoPath, moveMonoPath, btype,other)
+        {
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        }
     }
 }

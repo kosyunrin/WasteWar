@@ -63,15 +63,35 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\CSErrorBoxManager.cs" />
-    <Compile Include="Assets\CSSInventory.cs" />
-    <Compile Include="Assets\CSSIteamDrag.cs" />
-    <Compile Include="Assets\CSTouch.cs" />
+    <Compile Include="Assets\C#\CSAlwaysExistUi.cs" />
+    <Compile Include="Assets\C#\CSChimeraBoxManager.cs" />
+    <Compile Include="Assets\C#\CSChimeraItemsController.cs" />
+    <Compile Include="Assets\C#\CSChimeraShowController.cs" />
+    <Compile Include="Assets\C#\CSCompleteController.cs" />
+    <Compile Include="Assets\C#\CSDataManagement.cs" />
+    <Compile Include="Assets\C#\CSErrorBoxManager.cs" />
+    <Compile Include="Assets\C#\CSHallUiManager.cs" />
+    <Compile Include="Assets\C#\CSItemChimeras.cs" />
+    <Compile Include="Assets\C#\CSLaser.cs" />
+    <Compile Include="Assets\C#\CSMoveChimeraController.cs" />
+    <Compile Include="Assets\C#\CSOperatingState.cs" />
+    <Compile Include="Assets\C#\CSPlayState.cs" />
+    <Compile Include="Assets\C#\CSSInventory.cs" />
+    <Compile Include="Assets\C#\CSSIteamDrag.cs" />
+    <Compile Include="Assets\C#\CSShowState.cs" />
+    <Compile Include="Assets\C#\CSTouchOnOperatingState.cs" />
+    <Compile Include="Assets\C#\CSWarManagement.cs" />
+    <Compile Include="Assets\C#\MonoController.cs" />
+    <Compile Include="Assets\C#\MonoStateBase.cs" />
+    <Compile Include="Assets\C#\SceneButtonCSmananger.cs" />
+    <Compile Include="Assets\C#\test.cs" />
+    <Compile Include="Assets\CSTestScene.cs" />
     <Compile Include="Assets\Resources\Script\CSCameraController.cs" />
-    <Compile Include="Assets\Resources\Script\CSComPoundManager.cs" />
     <Compile Include="Assets\Resources\Script\CSDataManager.cs" />
     <Compile Include="Assets\Resources\Script\CSItemBase.cs" />
     <Compile Include="Assets\Resources\Script\CSItemUI.cs" />
+    <Compile Include="Assets\Resources\Script\CSMoveAnimalsController.cs" />
+    <Compile Include="Assets\Resources\Script\CSMoveHumenController.cs" />
     <Compile Include="Assets\Resources\Script\CSOtherPartController.cs" />
     <Compile Include="Assets\Resources\Script\CSPlayerBase.cs" />
     <Compile Include="Assets\Resources\Script\CSPlayerController.cs" />
@@ -80,8 +100,6 @@
     <Compile Include="Assets\Resources\Script\CSitemAnimals.cs" />
     <Compile Include="Assets\Resources\Script\CSitemHuman.cs" />
     <Compile Include="Assets\Resources\Script\CsDragObj.cs" />
-    <Compile Include="Assets\SceneButtonCSmananger.cs" />
-    <Compile Include="Assets\test.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.14f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
