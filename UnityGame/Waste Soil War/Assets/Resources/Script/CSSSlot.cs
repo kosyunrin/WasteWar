@@ -8,12 +8,12 @@ namespace SK
 
     public class CSSSlot : MonoBehaviour
     {
-        public GameObject ItemPrefas = null;
+        [SerializeField] GameObject ItemPrefas = null;
         //private int Amount;
         private void Awake()
         {
             if (ItemPrefas == null)
-                ItemPrefas = Resources.Load<GameObject>("prefabs/testitem");
+                ItemPrefas = Resources.Load<GameObject>("prefabs/item");
         }
         // Start is called before the first frame update
         void Start()
@@ -35,9 +35,10 @@ namespace SK
 
                 _itemPrefas.transform.SetParent(transform);
                 _itemPrefas.transform.localPosition = Vector3.zero;
+                _itemPrefas.transform.localScale = new Vector3(1, 1, 1);
                 transform.GetChild(0).GetComponent<CSSIteamDrag>().SetItem(item);
-                _rtransform.offsetMax = new Vector2(-5, -5);
-                _rtransform.offsetMin = new Vector2(5, 5);
+                //_rtransform.offsetMax = new Vector2(-5, -5);
+                //_rtransform.offsetMin = new Vector2(5, 5);
             }
             else
             {

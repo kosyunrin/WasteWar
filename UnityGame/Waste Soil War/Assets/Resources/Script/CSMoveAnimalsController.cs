@@ -15,7 +15,7 @@ namespace SK
         // Update is called once per frame
         void Update()
         {
-            MonoExecute(this);
+            MonoExecute();
         }
     }
 }
