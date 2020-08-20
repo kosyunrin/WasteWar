@@ -6,9 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/MainScene.unity
+    path: Assets/GameMain/Scenes/GameEntry.unity
+    guid: 2fb39849b2f09cc4296fca223a7808ba
+  - enabled: 1
+    path: Assets/GameMain/Scenes/HallRoom.unity
     guid: 789db5e7197b44144912c0c3c03b0df0
   - enabled: 1
-    path: Assets/WarScene.unity
+    path: Assets/GameMain/Scenes/GameRoom.unity
     guid: 2f1084bcb67ff7b488b7f4eeb75e4a5e
   m_configObjects: {}

@@ -1,22 +1,41 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - CSCameraController
-    - CSItemUI
-    - CSSInventory
-    - CSSIteamDrag
-    - CSSSlot
-    - CsDragObj
-    - SK.GAMEDATA.CSDataManager
-    - SceneButtonCSmananger
-    - test
+    - CSTestScene
+    - GameName.BuiltinDataComponent
+    - GameName.GameEntry
+    - SK.CSAlwaysExistUi
+    - SK.CSCameraController
+    - SK.CSChimeraShowController
+    - SK.CSCompleteController
+    - SK.CSDataManagement
+    - SK.CSMoveAnimalsController
+    - SK.CSMoveHumenController
+    - SK.CSPlayerController
+    - SK.CSSInventory
+    - SK.CSSIteamDrag
+    - SK.CSSSlot
+    - SK.CSTouchMove
+    - SK.CSTouchOnOperatingState
+    - SK.CsDragObj
+    - SK.ERROR.CSErrorBoxManager
+    - SK.HALLROOM.CSChimeraBoxManager
+    - SK.HALLROOM.CSChimeraItemsController
+    - SK.HALLROOM.CSHallUiManager
+    - SK.HALLROOM.CSLaser
+    - SK.SceneButtonCSmananger
+    - SK.WARRROOM.CSGAMEROOM
+    - SK.WARRROOM.CSWarManagement
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateMachineNode
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -32,8 +51,30 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Image
     - UnityEngine.UI.InputField
     - UnityEngine.UI.Text
+    UnityGameFramework.Runtime.dll:
+    - UnityGameFramework.Runtime.BaseComponent
+    - UnityGameFramework.Runtime.ConfigComponent
+    - UnityGameFramework.Runtime.DataNodeComponent
+    - UnityGameFramework.Runtime.DataTableComponent
+    - UnityGameFramework.Runtime.DebuggerComponent
+    - UnityGameFramework.Runtime.DownloadComponent
+    - UnityGameFramework.Runtime.EditorResourceComponent
+    - UnityGameFramework.Runtime.EntityComponent
+    - UnityGameFramework.Runtime.EventComponent
+    - UnityGameFramework.Runtime.FsmComponent
+    - UnityGameFramework.Runtime.LocalizationComponent
+    - UnityGameFramework.Runtime.NetworkComponent
+    - UnityGameFramework.Runtime.ObjectPoolComponent
+    - UnityGameFramework.Runtime.ProcedureComponent
+    - UnityGameFramework.Runtime.ReferencePoolComponent
+    - UnityGameFramework.Runtime.ResourceComponent
+    - UnityGameFramework.Runtime.SceneComponent
+    - UnityGameFramework.Runtime.SettingComponent
+    - UnityGameFramework.Runtime.SoundComponent
+    - UnityGameFramework.Runtime.UIComponent
+    - UnityGameFramework.Runtime.WebRequestComponent
   sceneClasses:
-    Assets/Scenes/OperatingRoom.unity:
+    Assets/GameMain/Scenes/GameEntry.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -52,57 +93,313 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
     - Class: 54
+      Script: {instanceID: 0}
+    - Class: 58
       Script: {instanceID: 0}
     - Class: 64
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 84
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 90
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11152}
+      Script: {instanceID: 570}
     - Class: 114
-      Script: {instanceID: 11266}
+      Script: {instanceID: 11156}
     - Class: 114
-      Script: {instanceID: 11312}
+      Script: {instanceID: 11246}
     - Class: 114
-      Script: {instanceID: 11352}
+      Script: {instanceID: 11320}
     - Class: 114
-      Script: {instanceID: 11520}
+      Script: {instanceID: 11360}
     - Class: 114
-      Script: {instanceID: 11524}
+      Script: {instanceID: 11510}
     - Class: 114
-      Script: {instanceID: 11672}
+      Script: {instanceID: 11538}
     - Class: 114
-      Script: {instanceID: 11742}
+      Script: {instanceID: 11546}
     - Class: 114
-      Script: {instanceID: 12124}
+      Script: {instanceID: 11660}
     - Class: 114
-      Script: {instanceID: 12126}
+      Script: {instanceID: 11696}
     - Class: 114
-      Script: {instanceID: 12312}
+      Script: {instanceID: 11768}
     - Class: 114
-      Script: {instanceID: 12602}
+      Script: {instanceID: 11882}
     - Class: 114
-      Script: {instanceID: 12608}
+      Script: {instanceID: 12156}
     - Class: 114
-      Script: {instanceID: 12734}
+      Script: {instanceID: 12158}
     - Class: 114
-      Script: {instanceID: 12916}
+      Script: {instanceID: 12316}
     - Class: 114
-      Script: {instanceID: 12954}
+      Script: {instanceID: 12350}
     - Class: 114
-      Script: {instanceID: 14484}
+      Script: {instanceID: 12434}
     - Class: 114
-      Script: {instanceID: 14496}
+      Script: {instanceID: 12530}
+    - Class: 114
+      Script: {instanceID: 12646}
+    - Class: 114
+      Script: {instanceID: 12652}
+    - Class: 114
+      Script: {instanceID: 12656}
+    - Class: 114
+      Script: {instanceID: 12782}
+    - Class: 114
+      Script: {instanceID: 12786}
+    - Class: 114
+      Script: {instanceID: 12836}
+    - Class: 114
+      Script: {instanceID: 12920}
+    - Class: 114
+      Script: {instanceID: 12972}
+    - Class: 114
+      Script: {instanceID: 13012}
+    - Class: 114
+      Script: {instanceID: 13028}
+    - Class: 114
+      Script: {instanceID: 15254}
+    - Class: 114
+      Script: {instanceID: 15296}
+    - Class: 114
+      Script: {instanceID: 15360}
+    - Class: 114
+      Script: {instanceID: 15374}
+    - Class: 114
+      Script: {instanceID: 15418}
+    - Class: 114
+      Script: {instanceID: 15434}
+    - Class: 114
+      Script: {instanceID: 15510}
+    - Class: 114
+      Script: {instanceID: 15514}
+    - Class: 114
+      Script: {instanceID: 15534}
+    - Class: 114
+      Script: {instanceID: 15556}
+    - Class: 114
+      Script: {instanceID: 15558}
+    - Class: 114
+      Script: {instanceID: 15580}
+    - Class: 114
+      Script: {instanceID: 15592}
+    - Class: 114
+      Script: {instanceID: 15638}
+    - Class: 114
+      Script: {instanceID: 15640}
+    - Class: 114
+      Script: {instanceID: 15696}
+    - Class: 114
+      Script: {instanceID: 15706}
+    - Class: 114
+      Script: {instanceID: 15708}
+    - Class: 114
+      Script: {instanceID: 15750}
+    - Class: 114
+      Script: {instanceID: 15776}
+    - Class: 114
+      Script: {instanceID: 15802}
+    - Class: 114
+      Script: {instanceID: 15862}
+    - Class: 114
+      Script: {instanceID: 15866}
+    - Class: 114
+      Script: {instanceID: 109044}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 120
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 134
+      Script: {instanceID: 0}
+    - Class: 135
+      Script: {instanceID: 0}
+    - Class: 136
+      Script: {instanceID: 0}
+    - Class: 137
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    - Class: 241
+      Script: {instanceID: 0}
+    - Class: 243
+      Script: {instanceID: 0}
+    - Class: 245
+      Script: {instanceID: 0}
+    - Class: 258
+      Script: {instanceID: 0}
+    Assets/GameMain/Scenes/GameRoom.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11156}
+    - Class: 114
+      Script: {instanceID: 11360}
+    - Class: 114
+      Script: {instanceID: 11486}
+    - Class: 114
+      Script: {instanceID: 11610}
+    - Class: 114
+      Script: {instanceID: 11768}
+    - Class: 114
+      Script: {instanceID: 12646}
+    - Class: 114
+      Script: {instanceID: 13012}
+    - Class: 114
+      Script: {instanceID: 13028}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 134
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/GameMain/Scenes/HallRoom.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 58
+      Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11156}
+    - Class: 114
+      Script: {instanceID: 11246}
+    - Class: 114
+      Script: {instanceID: 11320}
+    - Class: 114
+      Script: {instanceID: 11360}
+    - Class: 114
+      Script: {instanceID: 11510}
+    - Class: 114
+      Script: {instanceID: 11532}
+    - Class: 114
+      Script: {instanceID: 11538}
+    - Class: 114
+      Script: {instanceID: 11546}
+    - Class: 114
+      Script: {instanceID: 11696}
+    - Class: 114
+      Script: {instanceID: 11768}
+    - Class: 114
+      Script: {instanceID: 11882}
+    - Class: 114
+      Script: {instanceID: 11888}
+    - Class: 114
+      Script: {instanceID: 12156}
+    - Class: 114
+      Script: {instanceID: 12158}
+    - Class: 114
+      Script: {instanceID: 12316}
+    - Class: 114
+      Script: {instanceID: 12350}
+    - Class: 114
+      Script: {instanceID: 12530}
+    - Class: 114
+      Script: {instanceID: 12646}
+    - Class: 114
+      Script: {instanceID: 12652}
+    - Class: 114
+      Script: {instanceID: 12656}
+    - Class: 114
+      Script: {instanceID: 12786}
+    - Class: 114
+      Script: {instanceID: 12836}
+    - Class: 114
+      Script: {instanceID: 12972}
+    - Class: 114
+      Script: {instanceID: 13012}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 120
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
@@ -111,6 +408,8 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 212
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -147,6 +446,12 @@ ScriptsOnlyBuild:
     className: TMP_Dropdown
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: SK.HALLROOM
+    className: CSHallUiManager
+  - hash:
+      serializedVersion: 2
       Hash: e7a73f5f78ba6445195ec23b74a1ce2d
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -159,10 +464,16 @@ ScriptsOnlyBuild:
     className: PlayerQuitHandler
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: b1fd1bc95aca051d4da79c8a69911bbe
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: SK
+    className: CSItemUI
+  - hash:
+      serializedVersion: 2
+      Hash: d46c29d19b210f5dfd4e44c9179ceca6
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: CSItemUI
+    className: test
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -249,6 +560,18 @@ ScriptsOnlyBuild:
     className: PhysicsRaycaster
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CSTestScene
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: SK.ERROR
+    className: CSErrorBoxManager
+  - hash:
+      serializedVersion: 2
       Hash: bd3cf68c8964d3c66d1c43f4f98508c9
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -257,14 +580,20 @@ ScriptsOnlyBuild:
       serializedVersion: 2
       Hash: a62914c92acb063ac8c017e01c9dbe6c
     assemblyName: Assembly-CSharp.dll
-    namespaceName: 
+    namespaceName: SK
     className: CSCameraController
   - hash:
       serializedVersion: 2
       Hash: 29ee94bb8d0f8cec05a74926dfcf5edf
     assemblyName: Assembly-CSharp.dll
-    namespaceName: 
+    namespaceName: SK
     className: CSSSlot
+  - hash:
+      serializedVersion: 2
+      Hash: 6265db232d6b88a2d67dac4b1ec94c94
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: SK
+    className: CSChimeraShowController
   - hash:
       serializedVersion: 2
       Hash: cf9f5cf2c3145a37ac07f00e50e460f9
@@ -285,10 +614,22 @@ ScriptsOnlyBuild:
     className: TMP_SubMeshUI
   - hash:
       serializedVersion: 2
+      Hash: f241384234dd7111cbc3f53a55f8f832
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: SK.WARRROOM
+    className: CSWarManagement
+  - hash:
+      serializedVersion: 2
       Hash: 5ab533713adae59372fb3e10a585c186
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: AnimationPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: SK
+    className: CSMoveAnimalsController
   - hash:
       serializedVersion: 2
       Hash: aba7b2852ef61d175dd9602e7723d5e5
@@ -299,7 +640,7 @@ ScriptsOnlyBuild:
       serializedVersion: 2
       Hash: 0e8302e7b95ae3abf40cc458cfaa709d
     assemblyName: Assembly-CSharp.dll
-    namespaceName: 
+    namespaceName: SK
     className: CSSInventory
   - hash:
       serializedVersion: 2
@@ -307,6 +648,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Shadow
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: SK
+    className: CSMoveChimeraController
   - hash:
       serializedVersion: 2
       Hash: cc4274b586df3c02688bac01b88bd16c
@@ -337,6 +684,18 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Selectable
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: SK.HALLROOM
+    className: CSLaser
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: SK
+    className: CSDataManagement
   - hash:
       serializedVersion: 2
       Hash: b3ab2106268377ffe25dd18ac23dca28
@@ -381,10 +740,16 @@ ScriptsOnlyBuild:
     className: Button
   - hash:
       serializedVersion: 2
-      Hash: 726abc8ed3245b05e3fdf51497241449
+      Hash: 5725cbe004347864d9d99d50d389aebf
     assemblyName: Assembly-CSharp.dll
-    namespaceName: 
+    namespaceName: SK
     className: CSSIteamDrag
+  - hash:
+      serializedVersion: 2
+      Hash: c78be8edac4bde9d253a01778453a0de
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: SK.GAMEDATA
+    className: CSDataManager
   - hash:
       serializedVersion: 2
       Hash: f84d945e5e1ca985698660fc26e9657f
@@ -393,10 +758,22 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CSPlayerBase
+  - hash:
+      serializedVersion: 2
       Hash: 5ad4aa237d47ac2bab17bacb672edf7a
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: VerticalLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: a0c22ca0d9f1e65f1ae7f9f4f108c5ec
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: SK.HALLROOM
+    className: CSChimeraItemsController
   - hash:
       serializedVersion: 2
       Hash: 783f593b9380cf72d0f7ebfd4a0d4bcd
@@ -441,10 +818,22 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: SK
+    className: CSPlayerController
+  - hash:
+      serializedVersion: 2
       Hash: c1933cc0a2f4ff6eb13333347497beb3
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: TimelineAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: SK
+    className: CSCompleteController
   - hash:
       serializedVersion: 2
       Hash: 8001a5f7502aab37e42206da015e6914
@@ -465,10 +854,16 @@ ScriptsOnlyBuild:
     className: GraphicRaycaster
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: e88fb450c76530cf171823dd0fd9d93c
     assemblyName: Assembly-CSharp.dll
-    namespaceName: 
+    namespaceName: SK
     className: SceneButtonCSmananger
+  - hash:
+      serializedVersion: 2
+      Hash: 4eb60202412d2edbd06125f3d23641a7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: SK.HALLROOM
+    className: CSChimeraBoxManager
   - hash:
       serializedVersion: 2
       Hash: 88cc9df3c6fc697bfbeacd24c0d6f2d7
@@ -483,16 +878,28 @@ ScriptsOnlyBuild:
     className: MarkerTrack
   - hash:
       serializedVersion: 2
-      Hash: 855300c504bbe32729827001d615a6db
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
-    namespaceName: 
+    namespaceName: SK
     className: CsDragObj
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: SK
+    className: CSTouchOnOperatingState
   - hash:
       serializedVersion: 2
       Hash: d791aa6007fa3640be1164ea75bb087d
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_StyleSheet
+  - hash:
+      serializedVersion: 2
+      Hash: dca64c33c2e34fa3b5cc970a7b247e98
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: SK
+    className: CSAlwaysExistUi
   - hash:
       serializedVersion: 2
       Hash: 21d73eda81c18eacd2c91ad5dfaf2e32
@@ -508,6 +915,12 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: SK
+    className: CSMoveHumenController
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: PlayModeRunnerCallback
@@ -517,6 +930,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: BaseInput
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: SK
+    className: MonoController
   - hash:
       serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
@@ -567,6 +986,12 @@ ScriptsOnlyBuild:
     className: Toggle
   - hash:
       serializedVersion: 2
+      Hash: 5ae477fb3b5ae9d89fdf90f8b18d6570
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: SK
+    className: CSTouchMove
+  - hash:
+      serializedVersion: 2
       Hash: 8220b46879dc5e37db1b940c938f5744
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -591,18 +1016,344 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: c78be8edac4bde9d253a01778453a0de
+      Hash: e3da55981c8776884d33e7572f1bf9f3
     assemblyName: Assembly-CSharp.dll
-    namespaceName: SK.GAMEDATA
-    className: CSDataManager
+    namespaceName: GameName
+    className: BuiltinDataComponent
   - hash:
       serializedVersion: 2
-      Hash: d46c29d19b210f5dfd4e44c9179ceca6
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityGameFramework.Runtime.dll
+    namespaceName: UnityGameFramework.Runtime
+    className: DefaultEntityHelper
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityGameFramework.Runtime.dll
+    namespaceName: UnityGameFramework.Runtime
+    className: DefaultEntityGroupHelper
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityGameFramework.Runtime.dll
+    namespaceName: UnityGameFramework.Runtime
+    className: EventComponent
+  - hash:
+      serializedVersion: 2
+      Hash: 5f0b43daac7c7d4a31b0705643f96c6a
+    assemblyName: UnityGameFramework.Runtime.dll
+    namespaceName: UnityGameFramework.Runtime
+    className: UIIntKey
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: GameName
+    className: UGuiGroupHelper
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityGameFramework.Runtime.dll
+    namespaceName: UnityGameFramework.Runtime
+    className: DefaultSoundHelper
+  - hash:
+      serializedVersion: 2
+      Hash: 0c5f7cc36a240693d612bf03bc96370d
+    assemblyName: UnityGameFramework.Runtime.dll
+    namespaceName: UnityGameFramework.Runtime
+    className: UIComponent
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: GameName
+    className: GameEntry
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityGameFramework.Runtime.dll
+    namespaceName: UnityGameFramework.Runtime
+    className: DefaultResourceHelper
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityGameFramework.Runtime.dll
+    namespaceName: UnityGameFramework.Runtime
+    className: DefaultLoadResourceAgentHelper
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityGameFramework.Runtime.dll
+    namespaceName: UnityGameFramework.Runtime
+    className: DefaultLocalizationHelper
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: GameName
+    className: PlayerController
+  - hash:
+      serializedVersion: 2
+      Hash: 527481a30f5392239b35572a99f4a2e9
+    assemblyName: UnityGameFramework.Runtime.dll
+    namespaceName: UnityGameFramework.Runtime
+    className: ResourceComponent
+  - hash:
+      serializedVersion: 2
+      Hash: 2034ba8f4d95f11825e49ccd5d1d2969
+    assemblyName: UnityGameFramework.Runtime.dll
+    namespaceName: UnityGameFramework.Runtime
+    className: SceneComponent
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityGameFramework.Runtime.dll
+    namespaceName: UnityGameFramework.Runtime
+    className: PlayerPrefsSettingHelper
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityGameFramework.Runtime.dll
+    namespaceName: UnityGameFramework.Runtime
+    className: DefaultDataTableHelper
+  - hash:
+      serializedVersion: 2
+      Hash: 4f321eb10e156307d69e3f8d5c7923f2
+    assemblyName: UnityGameFramework.Runtime.dll
+    namespaceName: UnityGameFramework.Runtime
+    className: DefaultSoundGroupHelper
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityGameFramework.Runtime.dll
+    namespaceName: UnityGameFramework.Runtime
+    className: DefaultUIFormHelper
+  - hash:
+      serializedVersion: 2
+      Hash: eeeca9341a0e9dfcd74491d1645b4a3a
+    assemblyName: UnityGameFramework.Runtime.dll
+    namespaceName: UnityGameFramework.Runtime
+    className: LocalizationComponent
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityGameFramework.Runtime.dll
+    namespaceName: UnityGameFramework.Runtime
+    className: ObjectPoolComponent
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityGameFramework.Runtime.dll
+    namespaceName: UnityGameFramework.Runtime
+    className: DefaultUIGroupHelper
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: GameName
+    className: XmlLocalizationHelper
+  - hash:
+      serializedVersion: 2
+      Hash: 872c8581d0c9ff68e898dbca58859cb7
+    assemblyName: UnityGameFramework.Runtime.dll
+    namespaceName: UnityGameFramework.Runtime
+    className: WebRequestComponent
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityGameFramework.Runtime.dll
+    namespaceName: UnityGameFramework.Runtime
+    className: UnityWebRequestAgentHelper
+  - hash:
+      serializedVersion: 2
+      Hash: 8af6d3da450264d2bd119ced264cfe64
+    assemblyName: UnityGameFramework.Runtime.dll
+    namespaceName: UnityGameFramework.Runtime
+    className: UIStringKey
+  - hash:
+      serializedVersion: 2
+      Hash: b38eee464a2c198bde78d4810c788c55
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: test
+    className: Destructible
+  - hash:
+      serializedVersion: 2
+      Hash: 16e07f4059091b7943505e9f7a8f1c32
+    assemblyName: UnityGameFramework.Runtime.dll
+    namespaceName: UnityGameFramework.Runtime
+    className: DownloadComponent
+  - hash:
+      serializedVersion: 2
+      Hash: deed2080e83f3e6a5fc0a25f162251ba
+    assemblyName: UnityGameFramework.Runtime.dll
+    namespaceName: UnityGameFramework.Runtime
+    className: DataTableComponent
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityGameFramework.Runtime.dll
+    namespaceName: UnityGameFramework.Runtime
+    className: NetworkComponent
+  - hash:
+      serializedVersion: 2
+      Hash: 20e04a6090f2af37b927742932ed6405
+    assemblyName: UnityGameFramework.Runtime.dll
+    namespaceName: UnityGameFramework.Runtime
+    className: SettingComponent
+  - hash:
+      serializedVersion: 2
+      Hash: 7ebc010ac8aefb5b92ad17c421a34e34
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: GameName
+    className: SettingForm
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityGameFramework.Runtime.dll
+    namespaceName: UnityGameFramework.Runtime
+    className: DataNodeComponent
+  - hash:
+      serializedVersion: 2
+      Hash: 9564b1b80a076da05a5b7aa309240765
+    assemblyName: UnityGameFramework.Runtime.dll
+    namespaceName: UnityGameFramework.Runtime
+    className: EntityComponent
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityGameFramework.Runtime.dll
+    namespaceName: UnityGameFramework.Runtime
+    className: UIForm
+  - hash:
+      serializedVersion: 2
+      Hash: 05468c08d1e6d8f9fa06c2c1653f5b4d
+    assemblyName: UnityGameFramework.Runtime.dll
+    namespaceName: UnityGameFramework.Runtime
+    className: EditorResourceComponent
+  - hash:
+      serializedVersion: 2
+      Hash: 2eb9ace6ee8c68dc31c58332a042b0f3
+    assemblyName: UnityGameFramework.Runtime.dll
+    namespaceName: UnityGameFramework.Runtime
+    className: ProcedureComponent
+  - hash:
+      serializedVersion: 2
+      Hash: 4922d37a92de4b4db2d917ac6c58a000
+    assemblyName: UnityGameFramework.Runtime.dll
+    namespaceName: UnityGameFramework.Runtime
+    className: ConfigComponent
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityGameFramework.Runtime.dll
+    namespaceName: UnityGameFramework.Runtime
+    className: Entity
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityGameFramework.Runtime.dll
+    namespaceName: UnityGameFramework.Runtime
+    className: DefaultSettingHelper
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityGameFramework.Runtime.dll
+    namespaceName: UnityGameFramework.Runtime
+    className: FsmComponent
+  - hash:
+      serializedVersion: 2
+      Hash: 7b33a81ca5120f435a43823468e9f879
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: GameName
+    className: CommonButton
+  - hash:
+      serializedVersion: 2
+      Hash: 33c66867f0905c5582ef4717d3a50ff6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: GameName
+    className: MenuForm
+  - hash:
+      serializedVersion: 2
+      Hash: 173c95beb51a58eda36b12a6132cc902
+    assemblyName: UnityGameFramework.Runtime.dll
+    namespaceName: UnityGameFramework.Runtime
+    className: ReferencePoolComponent
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityGameFramework.Runtime.dll
+    namespaceName: UnityGameFramework.Runtime
+    className: UnityWebRequestDownloadAgentHelper
+  - hash:
+      serializedVersion: 2
+      Hash: d7912c765efb61cb6ee4c7c78f120d21
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: GameName
+    className: ScoreForm
+  - hash:
+      serializedVersion: 2
+      Hash: 2f82edef02e2232cf1329c7e7dbd7cdf
+    assemblyName: UnityGameFramework.Runtime.dll
+    namespaceName: UnityGameFramework.Runtime
+    className: BaseComponent
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityGameFramework.Runtime.dll
+    namespaceName: UnityGameFramework.Runtime
+    className: DefaultConfigHelper
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: GameName
+    className: PlayerHUDForm
+  - hash:
+      serializedVersion: 2
+      Hash: 32eaea2bc3de34dbbb7f49593ebe0a02
+    assemblyName: UnityGameFramework.Runtime.dll
+    namespaceName: UnityGameFramework.Runtime
+    className: SoundComponent
+  - hash:
+      serializedVersion: 2
+      Hash: 269b008dc9801ee2ef71926786bc7831
+    assemblyName: UnityGameFramework.Runtime.dll
+    namespaceName: UnityGameFramework.Runtime
+    className: DebuggerComponent
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: GameName
+    className: Start
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityGameFramework.Runtime.dll
+    namespaceName: UnityGameFramework.Runtime
+    className: DefaultSoundAgentHelper
+  - hash:
+      serializedVersion: 2
+      Hash: c2638d2502d029297f2c73e0d9ba76ef
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: GameName
+    className: DialogForm
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: GameName
+    className: End
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: SK.WARRROOM
+    className: CSGAMEROOM
   platform: 5
   scenePathNames:
-  - Assets/Scenes/OperatingRoom.unity
-  playerPath: "C:/Users/kosyu/OneDrive/\u30C7\u30B9\u30AF\u30C8\u30C3\u30D7/\u65B0\u3057\u3044\u30D5\u30A9\u30EB\u30C0\u30FC/Waste
+  - Assets/GameMain/Scenes/GameEntry.unity
+  - Assets/GameMain/Scenes/HallRoom.unity
+  - Assets/GameMain/Scenes/GameRoom.unity
+  playerPath: "C:/Users/kosyu/OneDrive/\u30C7\u30B9\u30AF\u30C8\u30C3\u30D7/MyGame/Waste
     Soil War.exe"
