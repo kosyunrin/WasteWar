@@ -29,6 +29,7 @@ namespace SK
     {
         
     }
+    [SerializeField]
     public class CSItemBase 
     {
         public virtual int ID { get; set; }
